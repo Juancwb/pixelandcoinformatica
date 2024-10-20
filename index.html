@@ -1,56 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Online Informática</title>
+    <title>Pixel & Co. Informática</title>
     <!-- Fonte -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css">
-    <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
-        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/a6d9238871.js" crossorigin="anonymous"></script>
-    <!-- Progress Bar -->
-    <script src="js/progressbar.min.js"></script>
-    <!-- Parallax -->
-    <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
-
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
     <header>
         <div class="container" id="nav-container">
             <div class="main-nav-bar">
-                <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
-                    <a class="navbar-brand" href="#">
-                        <img id="logo" src="img/logo.jpeg" alt="Online Informática">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links"
-                        aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
+                <nav class="navbar navbar-expand fixed-top navbar-dark">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbar-links" aria-controls="navbar-links" aria-expanded="false"
+                        aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
-                        <div class="navbar-nav">
+                    <div class="collapse navbar-collapse" id="navbar-links">
+                        <div class="navbar-nav ms-auto">
                             <a class="nav-link" id="home-menu" href="#">Home<span class="sr-only"></span></a>
-                            <a class="nav-link" id="about-menu" href="#">A Online</a>
-                            <a class="nav-link" id="services-menu" href="#">Serviços</a>
-                            <a class="nav-link" id="team-menu" href="#">Time</a>
-                            <a class="nav-link" id="contact-menu" href="#">Contato</a>
+                            <a class="nav-link" id="about-menu" href="#about-area">A Pixel & Co.</a>
+                            <a class="nav-link" id="services-menu" href="#services-area">Serviços</a>
+                            <a class="nav-link" id="team-menu" href="#team-area">Time</a>
+                            <a class="nav-link" id="contact-menu" href="#contact-area">Contato</a>
                         </div>
                     </div>
                 </nav>
@@ -58,13 +39,17 @@
         </div>
     </header>
     <main>
-        <div class="container-fluid">
-            <div class="carousel slide" id="mainSlider" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="mainSlider" data-slide-to="0" class="active"></li>
-                    <li data-target="mainSlider" data-slide-to="1"></li>
-                    <li data-target="mainSlider" data-slide-to="2"></li>
-                </ol>
+        <!-- Carousel -->
+        <section class="container-fluid">
+            <div class="carousel slide" id="mainSlider">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#mainSlider" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#mainSlider" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#mainSlider" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src="img/hardware.jpg" class="d-block w-100" alt="Hardware">
@@ -75,7 +60,7 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="img/performance.jpg" class="d-block w-100" alt="Performande">
+                        <img src="img/performance.jpg" class="d-block w-100" alt="Performance">
                         <div class="carousel-caption d-md-block">
                             <h2></h2>
                             <p></p>
@@ -90,39 +75,41 @@
                             <a href="#" class="main-btn">Redes</a>
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-target="#mainSlider" data-slide="prev">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#mainSlider"
+                        data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-target="#mainSlider" data-slide="next">
+                    <button class="carousel-control-next" type="button" data-bs-target="#mainSlider"
+                        data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                     </button>
                 </div>
             </div>
-        </div>
+        </section>
         <!-- Sobre a Empresa -->
         <section id="about-area">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h3 class="main-title">A Online</h3>
+                        <h3 class="main-title">PIXEL & Co.</h3>
                     </div>
-                    <div class="col-md-6">
-                        <img class="img-fluid" src="img/logo-white.jpeg" alt="Online Informática">
+                    <div class="col-md-4">
+                        <img class="img-fluid" src="img/Logo.png" alt="Pixel & Co. Informática">
                     </div>
-                    <div class="col-md-6">
-                        <h3 class="about-title">Conheça a Online Informática</h3>
-                        <p>Fundada no ano de 2020, a Online Informática é especializada em oferecer soluções completas
+                    <div class="col-md-8" id="content-area" >
+                        <h3 class="about-title">Conheça a Pixel & Co. Informática</h3>
+                        <p>Fundada no ano de 2024, a Pixel & Co. Informática é especializada em oferecer soluções completas
                             em manutenção e otimização de computadores. Com uma equipe de técnicos experientes, nosso
                             objetivo é garantir que seu equipamento funcione de maneira eficiente e segura. Entendemos a
-                            importância da técnologia no dia a dia dos negócios e nos dedicamos a oferecer serviços de
+                            importância da tecnologia no dia a dia dos negócios e nos dedicamos a oferecer serviços de
                             alta qualidade para melhorar o desempenho e a segurança dos seus sistemas.</p>
                         <p>Veja outros diferenciais:</p>
                         <ul id="about-list">
-                            <li><i class="fas fa-check"></i>Manutenção de Hardware</li>
-                            <li><i class="fas fa-check"></i>Melhoria de Performance</li>
-                            <li><i class="fas fa-check"></i>Serviços de Redes</li>
+                            <li><i class="fas fa-caret-up"></i>Manutenção de Hardware</li>
+                            <li><i class="fas fa-caret-up"></i>Melhoria de Performance</li>
+                            <li><i class="fas fa-caret-up"></i>Serviços de Redes</li>
                         </ul>
                     </div>
                 </div>
@@ -136,62 +123,156 @@
                         <h3 class="main-title">Nossas Especialidades</h3>
                     </div>
                     <div class="col-md-4 service-box">
-                        <i class="fas fa-mobile-alt"></i>
+                        <i class="fas fa-memory"></i>
                         <h4>Hardware</h4>
                         <p>Reparos e substituições de peças com qualidade garantida.</p>
                     </div>
                     <div class="col-md-4 service-box">
-                        <i class="fas fa-shopping-cart"></i>
+                        <i class="fas fa-chart-line"></i>
                         <h4>Melhoria de Performance</h4>
                         <p>Upgrade de sistemas para maximizar a velocidade e eficiência.</p>
                     </div>
                     <div class="col-md-4 service-box">
-                        <i class="fas fa-paint-brush"></i>
+                        <i class="fas fa-ethernet"></i>
                         <h4>Serviços de Redes</h4>
-                        <p>instalação e manutenção de redes locais, garantindo a melhor conectividade e segurança.</p>
+                        <p>Instalação e manutenção de redes locais, garantindo a melhor conectividade e segurança.</p>
                     </div>
-                    <div class="col-md-8 text-center">
+                    <div class="col-md-12 text-center service-box">
                         <p>Confie em nós para manter seus sistemas em perfeito estado, com suporte técnico rápido e
                             confiável.</p>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
         <!-- Time -->
-        <div id="team-area">
+        <section id="team-area" class="bg-light">
             <div class="container">
-                <div class="row justify-content-md-center">
-                    <div class="col-12">
-                        <h3 class="main-title">Nosso Time</h3>
+                <h3 class="main-title text-center">NOSSO TIME</h3>
+                <div class="row text-center justify-content-md-center">
+                    <div class="col-md-5">
+                        <img src="img/Man.jpg" class="img-fluid rounded-pill" alt="Edson Xavier">
+                        <h5 class="mt-3">Peter Jackson</h5>
+                        <p>CEO & Técnico</p>
                     </div>
-                    <div class="col-md-3">
-                        <div class="card">
-                            <img src="img/profile1.jpg" class="card-img-top" alt="Imagem de perfil 1">
-                            <div class="card-body">
-                                <h5 class="card-title">Edson Xavier</h5>
-                                <p class="card-text">CEO & Técnico</p>
+                    <div class="col-md-5">
+                        <img src="img/Woman.jpg" class="img-fluid rounded-pill" alt="Elisama Ulcen">
+                        <h5 class="mt-3">Daisy Stewart</h5>
+                        <p>Administradora e Atendimento ao Cliente</p>
+                    </div>
+                    <div class="container text-center">
+                        <div class="row justify-content-md-center">
+                            <div class="col-8">
+                                <p>Nosso time é formado por profissionais qualificados com vasta experiência em
+                                    tecnologia da informação. Cada membro da nossa equipe é comprometido com a
+                                    excelência e focado em entregar os melhores resultados. Orgulhamo-nos de nossa
+                                    habilidade em resolver problemas complexos e oferecer soluções inovadoras que
+                                    atendam as necessidades específicas de cada cliente.</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card">
-                            <img src="img/profile3.jpg" class="card-img-top" alt="Imagem de perfil 3">
-                            <div class="card-body">
-                                <h5 class="card-title">Elisama Ulcen</h5>
-                                <p class="card-text">Administradora e Atendimento ao Cliente</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-8 text-justify">
-                        <p>Nosso time é formado por profissionais qualificados com vasta experiência em técnologia da
-                            informação. Cada membro da nossa equipe é comprometido com a excelência e focado em entregar
-                            os melhores resultados. Orgulhamo-nos de nossa habilidade em resolver problemas complexos e
-                            oferecer soluções inovadoras que atendam as necessidades específicas de cada cliente.</p>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- Tips -->
+        <section id="tips-area" class="bg-light">
+            <div class="container">
+                <h3 class="main-title text-center">DÚVIDAS</h3>
+                <div id="tipsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row text-center justify-content-md-center">
+                                <div class="col-md-3 bg-light m-2" id="tip-box">
+                                    <h4>Quando é hora de formatar?</h4>
+                                    <p>A formatação pode ser uma solução eficaz quando seu computador está
+                                        excessivamente lento, infectado por vírus ou se comportando de maneira
+                                        irregular. Recomenda-se uma formatação completa para restaurar a eficiência do
+                                        sistema operacional, especialmente se as medidas de correção padrão falharem.
+                                    </p>
+                                </div>
+                                <div class="col-md-3 bg-light m-2" id="tip-box">
+                                    <h4>Troque seu HD por um SSD e sinta a diferença</h4>
+                                    <p>Substituir um disco rígido (HD) por um estado sólido (SSD) pode
+                                        significativamente melhorar a velocidade de inicialização e a resposta do seu
+                                        computador. Ideal para quem busca performance para jogos ou softwares pesados, a
+                                        troca proporciona uma nova vida ao seu equipamento.</p>
+                                </div>
+                                <div class="col-md-3 bg-light m-2" id="tip-box">
+                                    <h4>Upgrades que valem a pena</h4>
+                                    <p>Além de trocar o HD por um SSD, considerar um aumento de RAM pode ser crucial.
+                                        Para tarefas mais pesadas ou multitarefas, um upgrade na RAM permite que seu
+                                        computador processe mais dados simultaneamente, melhorando significativamente o
+                                        desempenho.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row text-center justify-content-md-center">
+                                <div class="col-md-3 bg-light m-2" id="tip-box">
+                                    <h4>Limpeza: essencial para a saúde do seu PC</h4>
+                                    <p>A poeira acumulada pode causar superaquecimento e até danos permanentes. Limpezas
+                                        regulares ajudam a manter o bom funcionamento e a prolongar a vida útil do seu
+                                        computador. Recomenda-se uma limpeza interna profissional pelo menos uma vez ao
+                                        ano.</p>
+                                </div>
+                                <div class="col-md-3 bg-light m-2" id="tip-box">
+                                    <h4>Mantenha seu computador seguro</h4>
+                                    <p>Investir em um bom antivírus e manter seu sistema operacional e programas sempre
+                                        atualizados são práticas essenciais para proteger seu computador contra ameaças
+                                        digitais. Vigilância e manutenção preventiva podem evitar dores de cabeça
+                                        futuras.</p>
+                                </div>
+                                <div class="col-md-3 bg-light m-2" id="tip-box">
+                                    <h4>Otimização da sua rede doméstica</h4>
+                                    <p>Para usuários que trabalham de casa ou desfrutam de entretenimento online, uma
+                                        rede bem configurada é crucial. Verifique se seu roteador está atualizado e
+                                        considere investir em tecnologias como Wi-Fi Mesh para maximizar a cobertura e
+                                        velocidade da internet.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#tipsCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#tipsCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Próximo</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- Contato -->
+        <section id="contact-area" class="bg-light">
+            <h2 class="main-title">CONTATO</h2>
+            <ul id="contact-list">
+                <li>
+                    <i class="fa fa-phone"></i> Telefone: <a href="https://wa.me/5541988524995" target="_blank">(41)
+                        98852-4995</a>
+                </li>
+                <li>
+                    <i class="fa fa-envelope"></i> Email: <a
+                        href="mailto:juancwb1@gmail.com">juancwb1@gmail.com</a>
+                </li>
+                <li>
+                    <i class="fa fa-instagram"></i> Instagram: <a href="https://www.instagram.com/pixelandcocwb/"
+                        target="_blank">@pixelandcocwb</a>
+                </li>
+            </ul>
+        </section>
     </main>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024  & Co. Informática. Todos os direitos reservados. Desenvolvido por Juan Carlo. <a
+                    class="fab fa-github" href="https://github.com/Juancwb" target="_blank"></a></p>
+        </div>
+    </footer>
+    <script src="script/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
